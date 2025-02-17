@@ -1,8 +1,5 @@
 /* Resetting default margin and padding for all elements */
-.Stock-Profile {
-    background-color: #93d0f4;
-    align-items: center;
-}
+
 
 * {
     margin: 0;
