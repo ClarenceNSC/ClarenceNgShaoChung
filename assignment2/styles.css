@@ -6,6 +6,8 @@
 
 .table {
     background-color: #ddd;
+    border-collapse: collapse;
+    
 }
 
 .Stock-Symbol {
