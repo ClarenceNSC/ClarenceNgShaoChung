@@ -6,13 +6,14 @@
 
 .table {
     background-color: #ddd;
-    margin-top: 0px;
 }
 
-.stock-symbol {
+.Stock-Symbol {
     margin-top: 0px;
 }
-
+.stan {
+    margin-top; 0px;
+}
 
 * {
     margin: 0;
