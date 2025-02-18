@@ -1,4 +1,13 @@
 /* Resetting default margin and padding for all elements */
+table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+
 .Stock-Profile {
     background-color: #93d0f4;
     text-align: center;   
