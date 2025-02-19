@@ -48,7 +48,7 @@ footer{
 }
 
 /* Add in your own customisations */
- #Display-block .About {
+.About {
   display: block;
   background-color: whitesmoke;
   border: 10px dashed white;
