@@ -1,6 +1,6 @@
 /* Resetting default margin and padding for all elements */
 header{
-    background-color: #93d0f4;
+  background-color: #93d0f4;
 }
 
 table {
@@ -15,7 +15,7 @@ table {
   }
 
 
-h1 {
+.Stock-Profile {
     background-color: #93d0f4;
     text-align: center;   
 }
