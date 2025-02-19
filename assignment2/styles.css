@@ -54,6 +54,9 @@ footer{
   border: 5px dashed blue;
  }
 
- .Singapore{
-  font: bold, green;
+ 
+ footer . Singapore{
+    font: bold, green;
+
  }
+ 
