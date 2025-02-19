@@ -48,3 +48,8 @@ footer{
 }
 
 /* Add in your own customisations */
+  body{
+    border-radius: dotted; 
+    border-color: black;
+    
+  }
