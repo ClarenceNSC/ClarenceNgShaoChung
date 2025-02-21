@@ -1,4 +1,32 @@
 /* Resetting default margin and padding for all elements */
+header{
+  background-color: #93d0f4;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #ddd;
+}
+  
+  table, th, td {
+    border: 1px solid black;
+    padding: 10px 200px 10px 0px;
+    text-align: left;
+  }
+
+
+  .Stock-Profile {
+    background-color: #93d0f4;
+    color: white;
+    text-align: center;   
+}
+
+a {
+  color: #0079c1
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,4 +41,17 @@ body {
     padding: 20px;
 }
 
+footer{
+  background-color:#93d0f4;
+  text-align: center;
+  color: white;
+}
+
 /* Add in your own customisations */
+.About {
+  display: block;
+  background-color: whitesmoke;
+  border: 5px dashed blue;
+ }
+
+ 
