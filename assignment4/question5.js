@@ -12,5 +12,10 @@ const disneyData = [
 		close: "124.92"
 	}
 ];
+let index = 0
+let result = 0
 
-// Write your code below
+for (let index = 0; index < disneyData.length; index++) {
+	result += parseFloat(disneyData[index]['close']);
+}
+	  console.log (result/2)
