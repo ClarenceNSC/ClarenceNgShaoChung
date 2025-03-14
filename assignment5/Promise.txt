@@ -1,0 +1,123 @@
+
+
+Question 1:
+const p = Promise.resolve("resolved");
+p.then(value => {console.log(value)});
+
+Question 2:
+const p = Promise.reject("at <anonymous>:1:26");
+
+    const ErrorFunc = (value) => {
+        console.log("Error : ", value)
+    }
+
+     p.then (result => { 
+        console.log ("Error:",result);
+     })
+   
+    .catch(error => {
+        console.error("Error: Oops!", error); 
+    })
+
+Question 3:
+const fetchUser = () => Promise.resolve ({id: 1, name: "Alice"});
+
+fetchUser() 
+    .then ((user) => {
+        console.log (user);
+    })
+
+Question 4:
+const fetchUser = () => Promise.resolve ({Name: "Alice"});
+
+fetchUser()
+    .then((user) => {
+       console.log(`${user.Name}`);
+    })
+
+Question 5:
+const p = Promise.reject("at <anonymous>:1:26");
+
+        const ErrorFunc = (value) => {
+            console.log("Error : ", value)
+    }
+
+     p.then (result => { 
+        console.log ("Error:",result);    
+    })   
+    .catch(error => {
+        console.error("Error: Invalid id", error); 
+    })
+
+
+Question 6:
+const p = Promise.resolve("resolved");
+    p
+    .then(value => {console.log(value)})
+    .finally(() => {
+        console.log ("Promise settled")
+    });
+
+Question 7:
+const fetchUser = () => Promise.resolve(21);
+
+
+    fetchUser()
+
+        .then ((user => {
+
+            console.log (`${"42"}`);
+        }))
+
+Question 8:
+const p = Promise.reject("0");
+       p.then (result => {console.log ("Error:",result);
+   })
+
+ .catch(error => {
+       console.error ("new Error: (Invalid value)", error);
+ })
+
+Question 9:
+const P1 = Promise.resolve(1);
+    const P2 = 2; 
+    const P3 = 3; 
+
+    Promise.all ([P1, P2, P3])
+    .then ((value) => {
+        console.log(value);
+    });
+
+
+Question 10:
+const P1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, "a");
+  });
+  
+  const p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 50, "b");
+  });
+
+  const P3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 150, "c");
+  });
+
+  Promise.race([P1, p2, P3])
+  .then((value) => {
+    console.log(value);
+  })
+
+Bonus Question:
+const p = Promise.resolve('World');
+
+p.then(value => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello ' + value); 
+    }, 1000); 
+  });
+})
+
+  .then((finalValue) => {
+    console.log (finalValue);
+  })
