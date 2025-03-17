@@ -13,7 +13,8 @@ function BlogList() {
 }
 
 function Header() {
-
+  return (<h1>My Blog</h1>)
+        (<p>A blog about everything</p>)
 }
 
 function Footer() {
