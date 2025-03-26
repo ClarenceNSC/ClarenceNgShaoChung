@@ -5,96 +5,91 @@
 //}
 //
 //function PrivateBlogPost() {
-
-//}
-//
-//function BlogList() {
-
-//}
-//
-//const blog = [
-//];
-
-//function Footer() {
-//
-//};
-//  
-//
-//function Blogspot() {
-//
-//
 //}
 
-//function Header(props) {
-//  return ( 
-//    <header>
-//    <h1>{props.title}</h1>
-//    <p>{props.tagline}</p>
-//    </header>
-//  );    
-//}
 
-//function HeaderMessage () {
-//return <ul>
-//  <Header
-//    title="My Blog"
-//    tagline="A blog for everything"
-//  />
-//</ul>
-//}
-
-//const BlogPost = () => {
-//  return (   
-//   <>
-//    <h2>My First Blog Post</h2>
-//    <p><i>By John Doe on Jun 01 2023</i></p>
-//    <p>Welcome to my first blog post! Today, I want to share my journey into the world of blogging. It has been an exciting experience so far, and I can’t wait to see where this path leads me.</p>
-//    </>
-//  )
-//}
-
-function BlogUpdate (props) {
+function HeaderMessage () {
   return (
-  <ul>
+    <header className="header">
+      <h1>My Blog</h1>
+      <p>A blog for everything</p>
+      </header>
+)}
+
+function BlogList (props) { 
+console.log(props.blogpostsData)
+return props.blogpostsData.map ((blog) => {
+  return (
+    <>
+    <BlogPost
+      key={blog.title}
+      title={blog.title}
+      author={blog.author}
+      date={blog.date}
+      content={blog.content}
+      />
+      </>
+     )
+  })
+} 
+
+function BlogPost (props) {
+  return (
+    <div>
     <h2>{props.title}</h2>
-    <p><i>By {props.author} on {props.date}</i></p>
-    <p>{props.content}</p>
-  </ul>
+    <p><i>{"By"+ " "+ props.author} {"on" + " "+ props.date}</i></p> 
+    <p> {props.content}</p>
+    </div>
   )
 }
 
-function BlogList (props) { 
-  console.log(props.blogpostsData)
-  return props.blogpostsData.map ((blog) => {
-    return (
-      <>
-      <BlogUpdate
-        key={blog.title}
-        title = {blog.title}
-        author = {blog. author}
-        date = {blog.date}
-        content = {blog.content}
-        />
-        </>
-    )
-  })
+function Footer({ year }) {
+  return <footer className="footer">
+    &copy; {year} My Blog. All rights reserved.</footer>;
 }
 
-function App() {
-  return <div>
-    <HeaderSection />
-    <BlogList blogpostsData= {rawData}/>
-    
-  </div>
-  }
 function HeaderSection () {
-  return <> 
-          <BlogUpdate className="blog-list" />
-        </>
-  }
+return (
+       <HeaderMessage /> 
+  )
+}
 
+function BlogUpdate() {
+  return 
+    <div>
+      <BlogPost className="blog-list"/>
+    </div>
+}
 
- const rawData = [
+function FooterSection() {
+  return (
+    <Footer year={2024}/>
+  )
+}
+  
+function App() {
+  return (
+    <div>
+      <HeaderSection />
+      <BlogList blogpostsData={blogPosts}/>
+      <BlogPost />
+    </div>
+  )
+}
+
+//function App() {
+//  return (
+//  <div>
+//    <HeaderSection />
+//    <PrivateBlogPost className="private-posts" blogData={blogPosts}/>
+//    <BlogUpdate/>
+//    <FooterSection />
+//    <BlogPost/>
+//  </div>
+//  )
+//}      
+
+ const blogPosts = [
    {
      title: 'My First Blog Post',
      author: 'John Doe',
